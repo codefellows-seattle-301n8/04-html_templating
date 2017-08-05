@@ -26,9 +26,11 @@ Article.prototype.toHtml = function() {
 
   // TODO: Use the function that Handlebars gave you to return your filled-in html template for THIS article.
   ////////////{{{body}}}????????????
-  var context = {author: "this.author", title: "this.title", publishStatus: "this.publishStatus", authorUrl: "this.authorUrl"};
+  var context = {author: this.author, title: this.title, publishStatus: this.publishStatus, authorUrl: this.authorUrl,
+body: this.body};
   var html = template(context);
 
+  return html;
 };
 
 rawData.sort(function(a,b) {
