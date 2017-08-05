@@ -19,8 +19,21 @@
         - Insert placeholder keys.
         - If your object doesn't have values you need yet, you can add those properties in the model.
     -->
-  </head>
+<script id="entry-template" type="text/x-handlebars-template">
+  <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+    <header>
+      <h1>{{title}}</h1>
+      <div class="byline">
+        By <address><a href="{{authorUrl}}">{{author}}</a></address>
+        {{publishStatus}}
+      </div>
+    </header>
+    <section class="article-body">{{{body}}}</section>
+    </div>
+  </script>
+</head>
   <body>
+
     <header class="site-header clearfix">
       <section class="heading-group-h1">
         <h1>
@@ -75,8 +88,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- TODO: Include Handlebars.JS from a CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
+
   </body>
 </html>
