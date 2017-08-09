@@ -24,8 +24,7 @@
         <header>
           <h1>{{title}}</h1>
           <div class="byline">
-            By <address><a href="{{authorUrl}}">{{author}}</a></address>
-            published <time pubdate datetime="{{publishedOn}}">{{daysAgo}}</time>
+            By <address><a href="{{authorUrl}}">{{author}}</a></address><time pubdate datetime="{{publishedOn}}"> {{{publishStatus}}}</time>
           </div>
         </header>
         <section class="article-body">{{{body}}}</section>
@@ -69,6 +68,7 @@
             </li>
           </ul>
         </div>
+        <div class="article-display"></div>
       </section>
       <section id="about" class="tab-content">
         <header>
